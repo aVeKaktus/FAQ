@@ -2,8 +2,8 @@
 <section class="faq">
     <div class="faq-container">
         <div class="section-header">
-            <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions about our technology solutions</p>
+            <h2>Sacred Knowledge Base</h2>
+            <p>Enlighten yourself with answers about God's Mushroom mysteries</p>
         </div>
 
         <div class="faq-grid">
@@ -11,13 +11,13 @@
             <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
                     <div class="faq-icon-wrapper">
-                        <i class="fas fa-credit-card feature-icon"></i>
+                        <i class="fas fa-mushroom feature-icon"></i>
                     </div>
-                    <h3>Payment Options</h3>
+                    <h3>Spiritual Journey Safety</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
-                    <p>We accept all major credit cards, PayPal, and bank transfers. Enterprise clients can arrange custom payment terms. All transactions are secured with industry-standard encryption.</p>
+                    <p>Our sacred mushrooms are carefully cultivated in blessed environments. Each batch undergoes rigorous spiritual and quality testing. We recommend starting with micro-doses for beginners on their path to enlightenment.</p>
                 </div>
             </div>
 
@@ -25,13 +25,13 @@
             <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
                     <div class="faq-icon-wrapper">
-                        <i class="fas fa-truck feature-icon"></i>
+                        <i class="fas fa-box-open feature-icon"></i>
                     </div>
-                    <h3>Delivery & Implementation</h3>
+                    <h3>Mystery Box Contents</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
-                    <p>Implementation timelines vary by solution. Standard deployment takes 2-4 weeks. Express implementation available for urgent needs. Our team provides 24/7 support throughout the process.</p>
+                    <p>Each monthly mystery box contains a curated selection of sacred specimens, ritual guidelines, and ceremonial tools. The contents are aligned with lunar cycles and seasonal energies for optimal spiritual connection.</p>
                 </div>
             </div>
 
@@ -39,13 +39,13 @@
             <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
                     <div class="faq-icon-wrapper">
-                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <i class="fas fa-moon feature-icon"></i>
                     </div>
-                    <h3>Security & Compliance</h3>
+                    <h3>Ritual Preparation</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
-                    <p>All our solutions are ISO 27001 certified and GDPR compliant. We employ end-to-end encryption and regular security audits to protect your data.</p>
+                    <p>We recommend fasting for 4-6 hours before any ceremony. Create a sacred space with provided incense and crystals. Each box includes detailed guidance for proper set and setting preparation.</p>
                 </div>
             </div>
 
@@ -53,13 +53,13 @@
             <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
                     <div class="faq-icon-wrapper">
-                        <i class="fas fa-headset feature-icon"></i>
+                        <i class="fas fa-hands-praying feature-icon"></i>
                     </div>
-                    <h3>Technical Support</h3>
+                    <h3>Spiritual Support</h3>
                     <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
-                    <p>Our dedicated support team is available 24/7. Enterprise clients receive priority support with guaranteed response times. Multiple support channels including phone, email, and live chat.</p>
+                    <p>Our shamanic guides are available for integration support. Members receive access to our sacred community forum and monthly virtual ceremonies. Emergency spiritual guidance available 24/7.</p>
                 </div>
             </div>
         </div>
@@ -68,13 +68,28 @@
     <style>
         .faq {
             padding: 100px 0;
-            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #2C1810 0%, #3D2517 100%);
+            color: #E6D5B8;
         }
 
         .faq-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .section-header h2 {
+            color: #E6D5B8;
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #B89F82;
+            text-align: center;
+            font-style: italic;
         }
 
         .faq-grid {
@@ -85,35 +100,19 @@
         }
 
         .faq-card {
-            background: white;
+            background: #1A0F0A;
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: all 0.4s ease;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .faq-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, var(--secondary-color) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            border: 1px solid #4A3527;
         }
 
         .faq-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
-
-        .faq-card:hover::before {
-            opacity: 0.05;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+            border-color: #6B4423;
         }
 
         .faq-header {
@@ -124,10 +123,10 @@
         }
 
         .faq-icon-wrapper {
-            width: 60px;
-            height: 60px;
-            background: var(--light-bg);
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            background: #2C1810;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -135,22 +134,20 @@
         }
 
         .faq-card:hover .faq-icon-wrapper {
-            background: var(--secondary-color);
-        }
-
-        .faq-card:hover .feature-icon {
-            color: white;
+            background: #3D2517;
         }
 
         .faq-header h3 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
+            font-size: 1.3rem;
+            color: #E6D5B8;
             flex-grow: 1;
+            font-weight: 600;
+            font-family: 'Cinzel', serif;
         }
 
         .toggle-icon {
-            font-size: 24px;
-            color: var(--secondary-color);
+            font-size: 20px;
+            color: #B89F82;
             transition: all 0.3s ease;
         }
 
@@ -159,21 +156,29 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
             margin-top: 0;
+            color: #B89F82;
         }
 
         .faq-card.active .faq-content {
             max-height: 200px;
             margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #4A3527;
         }
 
         .faq-card.active .toggle-icon {
             transform: rotate(45deg);
+            color: #8B4513;
         }
 
         .feature-icon {
-            font-size: 2rem;
-            color: var(--secondary-color);
+            font-size: 1.5rem;
+            color: #8B4513;
             transition: all 0.3s ease;
+        }
+
+        .faq-card:hover .feature-icon {
+            color: #B89F82;
         }
 
         @media (max-width: 768px) {
@@ -199,6 +204,8 @@
         }
     </script>
 </section>
+
+
 
 
 
