@@ -2,52 +2,52 @@
 <section class="faq-section">
     <div class="faq-container">
         <div class="section-header">
-            <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions about our services and products</p>
+            <h2>FAQ</h2>
+            <span class="section-subtitle">Got questions? We've got answers.</span>
         </div>
 
         <div class="faq-grid">
             <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>What payment methods do you accept?</h3>
-                    <span class="toggle-icon">+</span>
+                    <h3>💳 How do I pay for my order?</h3>
+                    <span class="toggle-icon"></span>
                 </div>
                 <div class="faq-answer">
-                    <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. For enterprise solutions, we also offer invoice-based payments.</p>
+                    <p>We've got all bases covered! Use any major credit card, PayPal, or even crypto. For the big spenders, we offer wire transfers and custom payment plans.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 2 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>How long does shipping take?</h3>
-                    <span class="toggle-icon">+</span>
+                    <h3>🚚 What about shipping times?</h3>
+                    <span class="toggle-icon"></span>
                 </div>
                 <div class="faq-answer">
-                    <p>Shipping times vary by location: Domestic orders typically arrive within 2-4 business days, while international shipping can take 7-14 business days. Express shipping options are available.</p>
+                    <p>Quick and reliable! US orders: 2-3 days. International: 5-7 days. Need it yesterday? Hit up our express shipping option at checkout.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>What is your return policy?</h3>
-                    <span class="toggle-icon">+</span>
+                    <h3>↩️ Changed your mind?</h3>
+                    <span class="toggle-icon"></span>
                 </div>
                 <div class="faq-answer">
-                    <p>We offer a 30-day return policy for unused items in their original packaging. Custom orders and opened software packages are non-refundable. Contact our support team to initiate a return.</p>
+                    <p>No sweat! Return unused items within 30 days, no questions asked. We'll even cover the shipping. Just keep the original packaging intact.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 4 -->
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>Do you offer technical support?</h3>
-                    <span class="toggle-icon">+</span>
+                    <h3>🛟 Need help?</h3>
+                    <span class="toggle-icon"></span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, we provide 24/7 technical support for all our products. Support is available via email, phone, and live chat. Enterprise customers receive priority support with dedicated account managers.</p>
+                    <p>We're here 24/7! Chat with us, email us, or call us. VIP customers get their own support ninja. How cool is that?</p>
                 </div>
             </div>
         </div>
@@ -55,89 +55,134 @@
 
     <style>
         .faq-section {
-            padding: 100px 0;
-            background: var(--light-bg);
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
         }
 
         .faq-container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 25px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 300;
         }
 
         .faq-grid {
             display: grid;
-            gap: 25px;
-            margin-top: 50px;
+            gap: 20px;
         }
 
         .faq-item {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            transition: all 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .faq-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
         }
 
         .faq-question {
-            padding: 25px 30px;
+            padding: 25px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
         }
 
         .faq-question h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
             color: var(--primary-color);
             margin: 0;
         }
 
         .toggle-icon {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            transition: transform 0.3s ease;
+            width: 24px;
+            height: 24px;
+            position: relative;
         }
 
-        .faq-answer {
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
+        .toggle-icon::before,
+        .toggle-icon::after {
+            content: '';
+            position: absolute;
+            background: var(--secondary-color);
+            border-radius: 2px;
             transition: all 0.3s ease;
         }
 
-        .faq-answer p {
-            padding: 20px 30px;
-            margin: 0;
-            color: #666;
-            line-height: 1.8;
+        .toggle-icon::before {
+            width: 2px;
+            height: 16px;
+            top: 4px;
+            left: 11px;
         }
 
-        .faq-item.active .toggle-icon {
-            transform: rotate(45deg);
+        .toggle-icon::after {
+            width: 16px;
+            height: 2px;
+            top: 11px;
+            left: 4px;
+        }
+
+        .faq-answer {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-answer p {
+            padding: 0 25px 25px;
+            margin: 0;
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .faq-item.active {
+            background: linear-gradient(to right bottom, #ffffff, #f9f9f9);
+        }
+
+        .faq-item.active .toggle-icon::before {
+            transform: scaleY(0);
         }
 
         .faq-item.active .faq-answer {
-            max-height: 300px;
+            height: auto;
         }
 
         @media (max-width: 768px) {
             .faq-section {
-                padding: 60px 0;
+                padding: 50px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
             }
 
             .faq-question h3 {
                 font-size: 1.1rem;
-            }
-
-            .faq-container {
-                padding: 0 20px;
             }
         }
     </style>
@@ -148,22 +193,33 @@
             
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
                 
                 question.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
                     
-                    // Close all other items
+                    // Smooth height transition
+                    if (!isActive) {
+                        answer.style.height = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.height = answer.scrollHeight + 'px';
+                        window.getComputedStyle(answer).height;
+                        answer.style.height = '0';
+                    }
+                    
+                    // Close other items
                     faqItems.forEach(otherItem => {
-                        otherItem.classList.remove('active');
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.height = '0';
+                        }
                     });
                     
-                    // Toggle current item
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
+                    item.classList.toggle('active');
                 });
             });
         });
     </script>
 </section>
+
 
