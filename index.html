@@ -1,223 +1,121 @@
 <!-- FAQ Section -->
-<section class="faq-section">
+<section class="faq">
     <div class="faq-container">
         <div class="section-header">
-            <h2>FAQ</h2>
-            <span class="section-subtitle">Got questions? We've got answers.</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our technology solutions</p>
         </div>
 
         <div class="faq-grid">
             <!-- FAQ Item 1 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>💳 How do I pay for my order?</h3>
-                    <span class="toggle-icon"></span>
+            <div class="faq-card">
+                <div class="faq-header">
+                    <i class="fas fa-credit-card feature-icon"></i>
+                    <h3>Payment Options</h3>
                 </div>
-                <div class="faq-answer">
-                    <p>We've got all bases covered! Use any major credit card, PayPal, or even crypto. For the big spenders, we offer wire transfers and custom payment plans.</p>
+                <div class="faq-content">
+                    <p>We accept all major credit cards, PayPal, and bank transfers. Enterprise clients can arrange custom payment terms. All transactions are secured with industry-standard encryption.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>🚚 What about shipping times?</h3>
-                    <span class="toggle-icon"></span>
+            <div class="faq-card">
+                <div class="faq-header">
+                    <i class="fas fa-truck feature-icon"></i>
+                    <h3>Delivery & Implementation</h3>
                 </div>
-                <div class="faq-answer">
-                    <p>Quick and reliable! US orders: 2-3 days. International: 5-7 days. Need it yesterday? Hit up our express shipping option at checkout.</p>
+                <div class="faq-content">
+                    <p>Implementation timelines vary by solution. Standard deployment takes 2-4 weeks. Express implementation available for urgent needs. Our team provides 24/7 support throughout the process.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>↩️ Changed your mind?</h3>
-                    <span class="toggle-icon"></span>
+            <div class="faq-card">
+                <div class="faq-header">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Security & Compliance</h3>
                 </div>
-                <div class="faq-answer">
-                    <p>No sweat! Return unused items within 30 days, no questions asked. We'll even cover the shipping. Just keep the original packaging intact.</p>
+                <div class="faq-content">
+                    <p>All our solutions are ISO 27001 certified and GDPR compliant. We employ end-to-end encryption and regular security audits to protect your data.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>🛟 Need help?</h3>
-                    <span class="toggle-icon"></span>
+            <div class="faq-card">
+                <div class="faq-header">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Technical Support</h3>
                 </div>
-                <div class="faq-answer">
-                    <p>We're here 24/7! Chat with us, email us, or call us. VIP customers get their own support ninja. How cool is that?</p>
+                <div class="faq-content">
+                    <p>Our dedicated support team is available 24/7. Enterprise clients receive priority support with guaranteed response times. Multiple support channels including phone, email, and live chat.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <style>
-        .faq-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+        .faq {
+            padding: 100px 0;
+            background: var(--light-bg);
         }
 
         .faq-container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 25px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 300;
+            padding: 0 20px;
         }
 
         .faq-grid {
             display: grid;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .faq-item {
+        .faq-card {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .faq-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .faq-question {
-            padding: 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-question h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 0;
-        }
-
-        .toggle-icon {
-            width: 24px;
-            height: 24px;
-            position: relative;
-        }
-
-        .toggle-icon::before,
-        .toggle-icon::after {
-            content: '';
-            position: absolute;
-            background: var(--secondary-color);
-            border-radius: 2px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
 
-        .toggle-icon::before {
-            width: 2px;
-            height: 16px;
-            top: 4px;
-            left: 11px;
+        .faq-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
-        .toggle-icon::after {
-            width: 16px;
-            height: 2px;
-            top: 11px;
-            left: 4px;
+        .faq-header {
+            margin-bottom: 20px;
         }
 
-        .faq-answer {
-            height: 0;
-            overflow: hidden;
-            transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        .faq-header h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 15px;
         }
 
-        .faq-answer p {
-            padding: 0 25px 25px;
-            margin: 0;
-            color: #555;
-            line-height: 1.7;
-            font-size: 1.1rem;
+        .faq-content p {
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        .faq-item.active {
-            background: linear-gradient(to right bottom, #ffffff, #f9f9f9);
-        }
-
-        .faq-item.active .toggle-icon::before {
-            transform: scaleY(0);
-        }
-
-        .faq-item.active .faq-answer {
-            height: auto;
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
         }
 
         @media (max-width: 768px) {
-            .faq-section {
-                padding: 50px 0;
+            .faq {
+                padding: 60px 0;
             }
 
-            .section-header h2 {
-                font-size: 2.5rem;
-            }
-
-            .faq-question h3 {
-                font-size: 1.1rem;
+            .faq-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-                
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    
-                    // Smooth height transition
-                    if (!isActive) {
-                        answer.style.height = answer.scrollHeight + 'px';
-                    } else {
-                        answer.style.height = answer.scrollHeight + 'px';
-                        window.getComputedStyle(answer).height;
-                        answer.style.height = '0';
-                    }
-                    
-                    // Close other items
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                            otherItem.querySelector('.faq-answer').style.height = '0';
-                        }
-                    });
-                    
-                    item.classList.toggle('active');
-                });
-            });
-        });
-    </script>
 </section>
+
+
+
