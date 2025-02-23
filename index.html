@@ -8,10 +8,13 @@
 
         <div class="faq-grid">
             <!-- FAQ Item 1 -->
-            <div class="faq-card">
+            <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
-                    <i class="fas fa-credit-card feature-icon"></i>
+                    <div class="faq-icon-wrapper">
+                        <i class="fas fa-credit-card feature-icon"></i>
+                    </div>
                     <h3>Payment Options</h3>
+                    <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
                     <p>We accept all major credit cards, PayPal, and bank transfers. Enterprise clients can arrange custom payment terms. All transactions are secured with industry-standard encryption.</p>
@@ -19,10 +22,13 @@
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="faq-card">
+            <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
-                    <i class="fas fa-truck feature-icon"></i>
+                    <div class="faq-icon-wrapper">
+                        <i class="fas fa-truck feature-icon"></i>
+                    </div>
                     <h3>Delivery & Implementation</h3>
+                    <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
                     <p>Implementation timelines vary by solution. Standard deployment takes 2-4 weeks. Express implementation available for urgent needs. Our team provides 24/7 support throughout the process.</p>
@@ -30,10 +36,13 @@
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="faq-card">
+            <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
-                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <div class="faq-icon-wrapper">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                    </div>
                     <h3>Security & Compliance</h3>
+                    <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
                     <p>All our solutions are ISO 27001 certified and GDPR compliant. We employ end-to-end encryption and regular security audits to protect your data.</p>
@@ -41,10 +50,13 @@
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="faq-card">
+            <div class="faq-card" onclick="toggleFAQ(this)">
                 <div class="faq-header">
-                    <i class="fas fa-headset feature-icon"></i>
+                    <div class="faq-icon-wrapper">
+                        <i class="fas fa-headset feature-icon"></i>
+                    </div>
                     <h3>Technical Support</h3>
+                    <span class="toggle-icon">+</span>
                 </div>
                 <div class="faq-content">
                     <p>Our dedicated support team is available 24/7. Enterprise clients receive priority support with guaranteed response times. Multiple support channels including phone, email, and live chat.</p>
@@ -56,7 +68,7 @@
     <style>
         .faq {
             padding: 100px 0;
-            background: var(--light-bg);
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
         }
 
         .faq-container {
@@ -74,35 +86,94 @@
 
         .faq-card {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-color) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .faq-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .faq-card:hover::before {
+            opacity: 0.05;
         }
 
         .faq-header {
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .faq-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: var(--light-bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-card:hover .faq-icon-wrapper {
+            background: var(--secondary-color);
+        }
+
+        .faq-card:hover .feature-icon {
+            color: white;
         }
 
         .faq-header h3 {
             font-size: 1.5rem;
             color: var(--primary-color);
-            margin-top: 15px;
+            flex-grow: 1;
         }
 
-        .faq-content p {
-            color: var(--text-color);
-            line-height: 1.6;
+        .toggle-icon {
+            font-size: 24px;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-top: 0;
+        }
+
+        .faq-card.active .faq-content {
+            max-height: 200px;
+            margin-top: 20px;
+        }
+
+        .faq-card.active .toggle-icon {
+            transform: rotate(45deg);
         }
 
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--secondary-color);
+            transition: all 0.3s ease;
         }
 
         @media (max-width: 768px) {
@@ -115,7 +186,20 @@
             }
         }
     </style>
+
+    <script>
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+            const allFAQs = document.querySelectorAll('.faq-card');
+            allFAQs.forEach(faq => {
+                if(faq !== element) {
+                    faq.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </section>
+
 
 
 
